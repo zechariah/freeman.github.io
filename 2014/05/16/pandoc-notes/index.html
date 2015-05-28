@@ -3,14 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Category: Ruby | Hexo</title>
+  <title>Pandoc Notes | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta content="website" property="og:type">
-<meta content="Hexo" property="og:title">
-<meta content="http://yoursite.com/categories/Ruby/" property="og:url">
+  <meta content="article" property="og:type">
+<meta content="Pandoc Notes" property="og:title">
+<meta content="http://yoursite.com/2014/05/16/pandoc-notes/" property="og:url">
 <meta property="og:image">
 <meta content="Hexo" property="og:site_name">
-<meta property="og:description">
+<meta content="Pandoc Notes
+
+HTML with CSS:pandoc 01-chapter2.markdown -o chapter2.html -c Github.css— http://www.yangzhiping.com/tech/pandoc.html
+
+HTML with smart quotes, table of contents, CSS, and custom footer:p" property="og:description">
 <meta content="summary" name="twitter:card">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -57,18 +61,12 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-how-to-install-ruby-gems" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-pandoc-notes" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2014/05/16/how-to-install-ruby-gems/" class="article-date">
-  <time datetime="2014-05-16T07:01:25.000Z" itemprop="datePublished">May 16 2014</time>
+    <a href="/2014/05/16/pandoc-notes/" class="article-date">
+  <time datetime="2014-05-16T06:57:32.000Z" itemprop="datePublished">May 16 2014</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Ruby/">Ruby</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -76,8 +74,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/05/16/how-to-install-ruby-gems/">how to Install Ruby Gems</a>
+    <h1 class="article-title" itemprop="name">
+      Pandoc Notes
     </h1>
   
 
@@ -85,107 +83,69 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="How_to_Install_Ruby_Gems">How to Install Ruby Gems</h1>
-<h2 id="RubyGems">RubyGems</h2>
-<blockquote>
-<p>RubyGems is a package management framework for Ruby.</p>
-</blockquote>
+        <h2 id="Pandoc_Notes">Pandoc Notes</h2>
 <ul>
-<li>Add gem sources:  </li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-3
-</pre></td><td class="code"><pre>gem sources <span class="subst">--</span>remove https:<span class="comment">//rubygems.org/</span>
-gem sources <span class="attribute">-a</span> https:<span class="comment">//ruby.taobao.org/</span>
-gem sources <span class="attribute">-l</span>
-</pre></td></tr></table></figure>
-
-<ul>
-<li>Install the gems on the destination machine from the local files:<br><code>gem install --force --local *.gem</code><br>Or<br><code>gem install --local *.gem</code>  </li>
-</ul>
-<h2 id="Bundler">Bundler</h2>
-<blockquote>
-<p>Bundler provides a consistent environment for Ruby projects by tracking and installing the exact gems and versions that are needed.  </p>
-</blockquote>
-<ul>
-<li><p>Generate a Gemfile with the default rubygems.org source by running <code>bundle init</code>.  </p>
+<li><p>HTML with CSS:<br><code>pandoc 01-chapter2.markdown -o chapter2.html -c Github.css</code><br>— <a href="http://www.yangzhiping.com/tech/pandoc.html" target="_blank">http://www.yangzhiping.com/tech/pandoc.html</a></p>
 </li>
-<li><p>Gemfile is a format for describing gem dependencies for Ruby Programs.  </p>
-<blockquote>
-<p>Place the <strong>Gemfile</strong> in the root of the directory containing the<br>associated code.   </p>
-</blockquote>
+<li><p>HTML with smart quotes, table of contents, CSS, and custom footer:<br><code>pandoc -s -S --toc -c pandoc.css -A footer.html README -o example3.html</code>  </p>
 </li>
-<li><p><code>bundle install</code>  </p>
+<li><p>HTML with embedded CSS:<br><code>pandoc -s -S --toc -H pandoc.css -A footer.html README -o example3.html</code></p>
 </li>
-<li><p><code>bundle install --without=pygments jekyll</code>  </p>
+<li><p><code>pandoc -s -o output.html input1.md intput2.md intput3.md</code>  </p>
 </li>
-<li><p><code>bundle install --local</code>  </p>
+<li><p>Syntax highlighting of delimited code blocks:<br><code>pandoc code.text -s --highlight-style zenburn -o example18g.html</code></p>
 </li>
-<li><p><code>bundle exec ruhoh server 9292</code>  </p>
+<li><p>Markdown citations:<br><code>pandoc -s -S --biblio biblio.bib --csl mhra.csl CITATIONS -o example24b.html</code></p>
 </li>
-<li><p>Write Gemfile from the command-line:  </p>
+<li><p>Textile reader:<br><code>pandoc -s -S example25.textile -f textile -t html -o example26.html</code></p>
+</li>
+<li><p>From HTML to Markdown:<br><code>pandoc -s -r html example.html -o example.md</code></p>
+</li>
+<li><p>If your local character encoding is not UTF-8, you should pipe input and output through iconv:<br><code>iconv -t utf-8 input.txt | pandoc | iconv -f utf-8</code></p>
 </li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-3
-4
-</pre></td><td class="code"><pre><span class="built_in">cd</span> ruhoh-site
-touch Gemfile 
-<span class="built_in">echo</span> <span class="string">"source \"https://rubygems.org\""</span> &gt;&gt; Gemfile
-<span class="built_in">echo</span> <span class="string">"gem 'ruhoh', \"~&gt;2\""</span> &gt;&gt; Gemfile
-</pre></td></tr></table></figure>
-
-<h3 id="My_Gemfile">My Gemfile</h3>
-<ul>
-<li>For MarkdownJournal  </li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="code"><pre><span class="keyword">source</span> <span class="string">'https://rubygems.org'</span>
-#<span class="keyword">source</span> <span class="string">'http://gems.rubyforge.org'</span>
-gem <span class="string">'sinatra'</span>, <span class="string">'~&gt;1.4.2'</span>
-gem <span class="string">'dropbox-sdk'</span>, <span class="string">'~&gt;1.5.1'</span>
-gem <span class="string">'activesupport'</span>, <span class="string">'~&gt;3.2.13'</span>
-gem <span class="string">'tzinfo'</span>, <span class="string">'~&gt;0.3.4'</span>
-gem <span class="string">'rdiscount'</span>, <span class="string">'~&gt;1.6.8'</span>
-</pre></td></tr></table></figure>
-
-<ul>
-<li>For Ruhoh  </li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-</pre></td><td class="code"><pre><span class="built_in">source</span> <span class="string">"https://ruby.taobao.org/"</span>
-gem <span class="string">'ruhoh'</span>, <span class="string">"~&gt; 2"</span>
-</pre></td></tr></table></figure>
-
-<h2 id="Install_DevKit">Install DevKit</h2>
-<ul>
-<li>Run Installation Scripts<br>First <code>ruby dk.rb init</code> then <code>ruby dk.rb install</code>  </li>
-<li>Test Installation<br>Confirm your Ruby environment is correctly using the DevKit by running <code>gem install json --platform=ruby</code>. JSON should install correctly and you should see <code>with native extensions</code> in the screen messages.<br>Next run <code>ruby -rubygems -e &quot;require &#39;json&#39;; puts JSON.load(&#39;[42]&#39;).inspect&quot;</code> to confirm that the json gem is working.</li>
-</ul>
+<hr>
+<p>Reference:  </p>
+<ol>
+<li><a href="http://johnmacfarlane.net/pandoc/demos.html" target="_blank">http://johnmacfarlane.net/pandoc/demos.html</a>  </li>
+<li><a href="http://devilgate.org/blog/2012/07/02/tip-using-pandoc-to-create-truly-standalone-html-files/" target="_blank">Tip: using Pandoc to create truly standalone HTML files</a>  </li>
+<li><a href="http://www.yangzhiping.com/tech/pandoc.html" target="_blank">Markdown写作进阶：Pandoc入门浅谈</a>  </li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/05/16/how-to-install-ruby-gems/" data-id="18qga91ft8ni7y94" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2014/05/16/pandoc-notes/" data-id="pud380vpkksn50f9" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pandoc/">pandoc</a></li></ul>
+
     </footer>
   </div>
   
+    
+<nav id="article-nav">
+  
+    <a href="/2014/05/16/how-to-install-ruby-gems/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          how to Install Ruby Gems
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/05/16/how-to-install-javascript-apps/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">How to Install JavaScript Apps</div>
+    </a>
+  
+</nav>
+
+  
 </article>
 
-
-  
-  
 </section>
         
           <aside id="sidebar">
