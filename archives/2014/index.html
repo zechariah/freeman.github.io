@@ -59,6 +59,132 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-how-to-install-ruby-gems" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/05/16/how-to-install-ruby-gems/" class="article-date">
+  <time datetime="2014-05-16T07:01:25.000Z" itemprop="datePublished">May 16 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Ruby/">Ruby</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/05/16/how-to-install-ruby-gems/">how to Install Ruby Gems</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="How_to_Install_Ruby_Gems">How to Install Ruby Gems</h1>
+<h2 id="RubyGems">RubyGems</h2>
+<blockquote>
+<p>RubyGems is a package management framework for Ruby.</p>
+</blockquote>
+<ul>
+<li>Add gem sources:  </li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre>gem sources <span class="subst">--</span>remove https:<span class="comment">//rubygems.org/</span>
+gem sources <span class="attribute">-a</span> https:<span class="comment">//ruby.taobao.org/</span>
+gem sources <span class="attribute">-l</span>
+</pre></td></tr></table></figure>
+
+<ul>
+<li>Install the gems on the destination machine from the local files:<br><code>gem install --force --local *.gem</code><br>Or<br><code>gem install --local *.gem</code>  </li>
+</ul>
+<h2 id="Bundler">Bundler</h2>
+<blockquote>
+<p>Bundler provides a consistent environment for Ruby projects by tracking and installing the exact gems and versions that are needed.  </p>
+</blockquote>
+<ul>
+<li><p>Generate a Gemfile with the default rubygems.org source by running <code>bundle init</code>.  </p>
+</li>
+<li><p>Gemfile is a format for describing gem dependencies for Ruby Programs.  </p>
+<blockquote>
+<p>Place the <strong>Gemfile</strong> in the root of the directory containing the<br>associated code.   </p>
+</blockquote>
+</li>
+<li><p><code>bundle install</code>  </p>
+</li>
+<li><p><code>bundle install --without=pygments jekyll</code>  </p>
+</li>
+<li><p><code>bundle install --local</code>  </p>
+</li>
+<li><p><code>bundle exec ruhoh server 9292</code>  </p>
+</li>
+<li><p>Write Gemfile from the command-line:  </p>
+</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="built_in">cd</span> ruhoh-site
+touch Gemfile 
+<span class="built_in">echo</span> <span class="string">"source \"https://rubygems.org\""</span> &gt;&gt; Gemfile
+<span class="built_in">echo</span> <span class="string">"gem 'ruhoh', \"~&gt;2\""</span> &gt;&gt; Gemfile
+</pre></td></tr></table></figure>
+
+<h3 id="My_Gemfile">My Gemfile</h3>
+<ul>
+<li>For MarkdownJournal  </li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="keyword">source</span> <span class="string">'https://rubygems.org'</span>
+#<span class="keyword">source</span> <span class="string">'http://gems.rubyforge.org'</span>
+gem <span class="string">'sinatra'</span>, <span class="string">'~&gt;1.4.2'</span>
+gem <span class="string">'dropbox-sdk'</span>, <span class="string">'~&gt;1.5.1'</span>
+gem <span class="string">'activesupport'</span>, <span class="string">'~&gt;3.2.13'</span>
+gem <span class="string">'tzinfo'</span>, <span class="string">'~&gt;0.3.4'</span>
+gem <span class="string">'rdiscount'</span>, <span class="string">'~&gt;1.6.8'</span>
+</pre></td></tr></table></figure>
+
+<ul>
+<li>For Ruhoh  </li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="built_in">source</span> <span class="string">"https://ruby.taobao.org/"</span>
+gem <span class="string">'ruhoh'</span>, <span class="string">"~&gt; 2"</span>
+</pre></td></tr></table></figure>
+
+<h2 id="Install_DevKit">Install DevKit</h2>
+<ul>
+<li>Run Installation Scripts<br>First <code>ruby dk.rb init</code> then <code>ruby dk.rb install</code>  </li>
+<li>Test Installation<br>Confirm your Ruby environment is correctly using the DevKit by running <code>gem install json --platform=ruby</code>. JSON should install correctly and you should see <code>with native extensions</code> in the screen messages.<br>Next run <code>ruby -rubygems -e &quot;require &#39;json&#39;; puts JSON.load(&#39;[42]&#39;).inspect&quot;</code> to confirm that the json gem is working.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2014/05/16/how-to-install-ruby-gems/" data-id="rjldy0kuurrlbbrk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-how-to-install-javascript-apps" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2014/05/16/how-to-install-javascript-apps/" class="article-date">
@@ -180,7 +306,7 @@ Options:
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/05/16/how-to-install-javascript-apps/" data-id="2oavehmilr8r828u" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2014/05/16/how-to-install-javascript-apps/" data-id="jnk71jwl6fnkz6ze" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cnpm/">cnpm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npmbox/">npmbox</a></li></ul>
@@ -230,7 +356,7 @@ Options:
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/05/16/hexo-quickstart/" data-id="1iswpjs6k42syvbe" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2014/05/16/hexo-quickstart/" data-id="x47etf36qx5bhwng" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -251,7 +377,7 @@ Options:
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ruby/">Ruby</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -278,7 +404,7 @@ Options:
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05">May 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05">May 2014</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05">May 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05">May 2014</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -291,6 +417,10 @@ Options:
         
           <li>
             <a href="/2015/05/28/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2014/05/16/how-to-install-ruby-gems/">how to Install Ruby Gems</a>
           </li>
         
           <li>
