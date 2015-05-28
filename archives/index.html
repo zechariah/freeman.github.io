@@ -59,418 +59,122 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/05/28/hello-world/" class="article-date">
-  <time datetime="2015-05-28T05:31:00.000Z" itemprop="datePublished">May 28 2015</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2015" class="archive-year">2015</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2015/05/28/hello-world/" class="archive-article-date">
+  <time datetime="2015-05-28T05:31:00.000Z" itemprop="datePublished">May 28</time>
 </a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+      
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/05/28/hello-world/">Hello World</a>
+      <a class="archive-article-title" href="/2015/05/28/hello-world/">Hello World</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="http://hexo.io" target="_blank">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs" target="_blank">documentation</a> to learn how to use.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/05/28/hello-world/" data-id="s2znkdhijp1lnt7s" class="article-share-link">Share</a>
-      
-      
-    </footer>
+    </header>
   </div>
-  
 </article>
-
-
   
-    <article id="post-how-to-install-ruby-gems" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/05/16/how-to-install-ruby-gems/" class="article-date">
-  <time datetime="2014-05-16T07:01:25.000Z" itemprop="datePublished">May 16 2014</time>
+    
+    
+      
+        </div></section>
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2014" class="archive-year">2014</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2014/05/16/how-to-install-ruby-gems/" class="archive-article-date">
+  <time datetime="2014-05-16T07:01:25.000Z" itemprop="datePublished">May 16</time>
 </a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Ruby/">Ruby</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+      
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/05/16/how-to-install-ruby-gems/">how to Install Ruby Gems</a>
+      <a class="archive-article-title" href="/2014/05/16/how-to-install-ruby-gems/">how to Install Ruby Gems</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="How_to_Install_Ruby_Gems">How to Install Ruby Gems</h1>
-<h2 id="RubyGems">RubyGems</h2>
-<blockquote>
-<p>RubyGems is a package management framework for Ruby.</p>
-</blockquote>
-<ul>
-<li>Add gem sources:  </li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-3
-</pre></td><td class="code"><pre>gem sources <span class="subst">--</span>remove https:<span class="comment">//rubygems.org/</span>
-gem sources <span class="attribute">-a</span> https:<span class="comment">//ruby.taobao.org/</span>
-gem sources <span class="attribute">-l</span>
-</pre></td></tr></table></figure>
-
-<ul>
-<li>Install the gems on the destination machine from the local files:<br><code>gem install --force --local *.gem</code><br>Or<br><code>gem install --local *.gem</code>  </li>
-</ul>
-<h2 id="Bundler">Bundler</h2>
-<blockquote>
-<p>Bundler provides a consistent environment for Ruby projects by tracking and installing the exact gems and versions that are needed.  </p>
-</blockquote>
-<ul>
-<li><p>Generate a Gemfile with the default rubygems.org source by running <code>bundle init</code>.  </p>
-</li>
-<li><p>Gemfile is a format for describing gem dependencies for Ruby Programs.  </p>
-<blockquote>
-<p>Place the <strong>Gemfile</strong> in the root of the directory containing the<br>associated code.   </p>
-</blockquote>
-</li>
-<li><p><code>bundle install</code>  </p>
-</li>
-<li><p><code>bundle install --without=pygments jekyll</code>  </p>
-</li>
-<li><p><code>bundle install --local</code>  </p>
-</li>
-<li><p><code>bundle exec ruhoh server 9292</code>  </p>
-</li>
-<li><p>Write Gemfile from the command-line:  </p>
-</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-3
-4
-</pre></td><td class="code"><pre><span class="built_in">cd</span> ruhoh-site
-touch Gemfile 
-<span class="built_in">echo</span> <span class="string">"source \"https://rubygems.org\""</span> &gt;&gt; Gemfile
-<span class="built_in">echo</span> <span class="string">"gem 'ruhoh', \"~&gt;2\""</span> &gt;&gt; Gemfile
-</pre></td></tr></table></figure>
-
-<h3 id="My_Gemfile">My Gemfile</h3>
-<ul>
-<li>For MarkdownJournal  </li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="code"><pre><span class="keyword">source</span> <span class="string">'https://rubygems.org'</span>
-#<span class="keyword">source</span> <span class="string">'http://gems.rubyforge.org'</span>
-gem <span class="string">'sinatra'</span>, <span class="string">'~&gt;1.4.2'</span>
-gem <span class="string">'dropbox-sdk'</span>, <span class="string">'~&gt;1.5.1'</span>
-gem <span class="string">'activesupport'</span>, <span class="string">'~&gt;3.2.13'</span>
-gem <span class="string">'tzinfo'</span>, <span class="string">'~&gt;0.3.4'</span>
-gem <span class="string">'rdiscount'</span>, <span class="string">'~&gt;1.6.8'</span>
-</pre></td></tr></table></figure>
-
-<ul>
-<li>For Ruhoh  </li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-</pre></td><td class="code"><pre><span class="built_in">source</span> <span class="string">"https://ruby.taobao.org/"</span>
-gem <span class="string">'ruhoh'</span>, <span class="string">"~&gt; 2"</span>
-</pre></td></tr></table></figure>
-
-<h2 id="Install_DevKit">Install DevKit</h2>
-<ul>
-<li>Run Installation Scripts<br>First <code>ruby dk.rb init</code> then <code>ruby dk.rb install</code>  </li>
-<li>Test Installation<br>Confirm your Ruby environment is correctly using the DevKit by running <code>gem install json --platform=ruby</code>. JSON should install correctly and you should see <code>with native extensions</code> in the screen messages.<br>Next run <code>ruby -rubygems -e &quot;require &#39;json&#39;; puts JSON.load(&#39;[42]&#39;).inspect&quot;</code> to confirm that the json gem is working.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/05/16/how-to-install-ruby-gems/" data-id="18qga91ft8ni7y94" class="article-share-link">Share</a>
-      
-      
-    </footer>
+    </header>
   </div>
-  
 </article>
-
-
   
-    <article id="post-pandoc-notes" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/05/16/pandoc-notes/" class="article-date">
-  <time datetime="2014-05-16T06:57:32.000Z" itemprop="datePublished">May 16 2014</time>
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2014/05/16/pandoc-notes/" class="archive-article-date">
+  <time datetime="2014-05-16T06:57:32.000Z" itemprop="datePublished">May 16</time>
 </a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+      
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/05/16/pandoc-notes/">Pandoc Notes</a>
+      <a class="archive-article-title" href="/2014/05/16/pandoc-notes/">Pandoc Notes</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Pandoc_Notes">Pandoc Notes</h2>
-<ul>
-<li><p>HTML with CSS:<br><code>pandoc 01-chapter2.markdown -o chapter2.html -c Github.css</code><br>— <a href="http://www.yangzhiping.com/tech/pandoc.html" target="_blank">http://www.yangzhiping.com/tech/pandoc.html</a></p>
-</li>
-<li><p>HTML with smart quotes, table of contents, CSS, and custom footer:<br><code>pandoc -s -S --toc -c pandoc.css -A footer.html README -o example3.html</code>  </p>
-</li>
-<li><p>HTML with embedded CSS:<br><code>pandoc -s -S --toc -H pandoc.css -A footer.html README -o example3.html</code></p>
-</li>
-<li><p><code>pandoc -s -o output.html input1.md intput2.md intput3.md</code>  </p>
-</li>
-<li><p>Syntax highlighting of delimited code blocks:<br><code>pandoc code.text -s --highlight-style zenburn -o example18g.html</code></p>
-</li>
-<li><p>Markdown citations:<br><code>pandoc -s -S --biblio biblio.bib --csl mhra.csl CITATIONS -o example24b.html</code></p>
-</li>
-<li><p>Textile reader:<br><code>pandoc -s -S example25.textile -f textile -t html -o example26.html</code></p>
-</li>
-<li><p>From HTML to Markdown:<br><code>pandoc -s -r html example.html -o example.md</code></p>
-</li>
-<li><p>If your local character encoding is not UTF-8, you should pipe input and output through iconv:<br><code>iconv -t utf-8 input.txt | pandoc | iconv -f utf-8</code></p>
-</li>
-</ul>
-<hr>
-<p>Reference:  </p>
-<ol>
-<li><a href="http://johnmacfarlane.net/pandoc/demos.html" target="_blank">http://johnmacfarlane.net/pandoc/demos.html</a>  </li>
-<li><a href="http://devilgate.org/blog/2012/07/02/tip-using-pandoc-to-create-truly-standalone-html-files/" target="_blank">Tip: using Pandoc to create truly standalone HTML files</a>  </li>
-<li><a href="http://www.yangzhiping.com/tech/pandoc.html" target="_blank">Markdown写作进阶：Pandoc入门浅谈</a>  </li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/05/16/pandoc-notes/" data-id="pud380vpkksn50f9" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pandoc/">pandoc</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
 </article>
-
-
   
-    <article id="post-how-to-install-javascript-apps" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/05/16/how-to-install-javascript-apps/" class="article-date">
-  <time datetime="2014-05-16T06:55:30.000Z" itemprop="datePublished">May 16 2014</time>
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2014/05/16/how-to-install-javascript-apps/" class="archive-article-date">
+  <time datetime="2014-05-16T06:55:30.000Z" itemprop="datePublished">May 16</time>
 </a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+      
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/05/16/how-to-install-javascript-apps/">How to Install JavaScript Apps</a>
+      <a class="archive-article-title" href="/2014/05/16/how-to-install-javascript-apps/">How to Install JavaScript Apps</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="How_to_Install_JavaScript_Apps">How to Install JavaScript Apps</h1>
-<h2 id="Install_node_programs">Install node programs</h2>
-<ul>
-<li>npm config(?what is npm?)  </li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-</pre></td><td class="code"><pre>npm config <span class="keyword">set</span> registry http://registry<span class="preprocessor">.cnpmjs</span><span class="preprocessor">.org</span>
-npm info underscore
-</pre></td></tr></table></figure>
-
-<ul>
-<li><p>Install cnpm(?what is cnpm?)<br><code>npm i -g cnpm</code></p>
-</li>
-<li><p>Examples<br>  <code>npm i -g harp --registry=http://r.cnpmjs.org</code>  </p>
-<p>  <code>npm i -g grunt-cli grunt-init --registry=http://r.cnpmjs.org</code>  </p>
-</li>
-</ul>
-<h2 id="Install_node_programs_with_npmbox">Install node programs with npmbox</h2>
-<p>npm addon utility for creating and installing from an archive file of an npm install, including dependencies. This lets you create a “box” of an installable package and move it to an offline system that will only install from that box.</p>
-<ul>
-<li>Usage of <code>npmbox</code>  </li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-</pre></td><td class="code"><pre>npmbox - Create an archive <span class="keyword">for</span> offline installation of the given package.
-
-Usage:
-
-  		npmbox --help
-  		npmbox [options] &lt;package&gt; &lt;package&gt;<span class="keyword">...</span>
-
-Options:
-
-  		-v, -verbose         Shows npm output which is normally hidden.
-</pre></td></tr></table></figure>
-
-<p>You must specify at least one package.</p>
-<p>You can specify more than one package and a separate archive will be created for each specified.</p>
-<p>npmbox files end with the .npmbox extension.</p>
-<ul>
-<li>Usage of <code>npmunbox</code>  </li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-</pre></td><td class="code"><pre>npmunbox - Extracts <span class="operator">a</span> .npmbox <span class="built_in">file</span> <span class="operator">and</span> installs <span class="operator">the</span> contained package.
-
-Usage:
-
-	npmunbox <span class="comment">--help</span>
-	npmunbox [options] &lt;nmpbox-<span class="built_in">file</span>&gt; &lt;npmbox-<span class="built_in">file</span>&gt;...
-
-Options:
-
-	-v, -verbose         Shows npm output which is normally hidden.
-	-g, -<span class="built_in">global</span>          Installs package globally <span class="keyword">as</span> <span class="keyword">if</span> <span class="comment">--global was passed to npm.</span>
-</pre></td></tr></table></figure>
-
-<p>You must specify at least one file.</p>
-<p>You may specify more than one file, and each will be installed.</p>
-<ul>
-<li><p>Installing npmbox from an .npmbox file  </p>
-<p>  <code>npm install --global --cache ./.npmbox-cache --optional --no-registry --fetch-retries 0 --fetch-retry-factor 0 --fetch-retry-mintimeout 1 --fetch-retry-maxtimeout 2 npmbox</code></p>
-</li>
-</ul>
-<h3 id="Node_Wiki">Node Wiki</h3>
-<p>A simple git based wiki system for markdown files written in node.js.</p>
-<ul>
-<li><p>Install<br>  <code>cnpm i nodewiki -g</code></p>
-</li>
-<li><p>Usage<br>  <code>nodewiki [options]</code>  </p>
-<p>  If you do not want other computers to be able to access node wiki, then use <code>--local</code> or <code>--port=127.0.0.1</code>. The URL for node wiki will then be <a href="http://localhost:8888/" target="_blank">http://localhost:8888/</a>.</p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/05/16/how-to-install-javascript-apps/" data-id="olc5gpkshrqryxkm" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cnpm/">cnpm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npmbox/">npmbox</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
 </article>
-
-
   
-    <article id="post-hexo-quickstart" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/05/16/hexo-quickstart/" class="article-date">
-  <time datetime="2014-05-16T06:49:35.000Z" itemprop="datePublished">May 16 2014</time>
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2014/05/16/hexo-quickstart/" class="archive-article-date">
+  <time datetime="2014-05-16T06:49:35.000Z" itemprop="datePublished">May 16</time>
 </a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+      
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/05/16/hexo-quickstart/">Hexo QuickStart</a>
+      <a class="archive-article-title" href="/2014/05/16/hexo-quickstart/">Hexo QuickStart</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Hexo_QuickStart">Hexo QuickStart</h2>
-<h3 id="Install">Install</h3>
-<pre><code>npm <span class="keyword">install</span> hexo -g
-</code></pre><h3 id="Setup">Setup</h3>
-<pre><code>hexo init blog &amp;&amp; <span class="built_in">cd</span> blog
-</code></pre><h3 id="Creates_a_new_article">Creates a new article</h3>
-<pre><code>hexo <span class="keyword">new</span> [layout] &lt;title&gt;
-</code></pre><p>If <code>layout</code> isn’t defined, it’ll be <code>default_layout</code> setting. If the title is more than one word, wrap it with quotation marks.</p>
-<h3 id="Generates_static_files">Generates static files</h3>
-<pre><code>hexo <span class="keyword">generate</span>
-</code></pre><h3 id="Starts_server">Starts server</h3>
-<pre><code>hexo <span class="keyword">server</span>
-</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/05/16/hexo-quickstart/" data-id="jgc7hh3jyvhjzghn" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
 </article>
-
-
   
+  
+    </div></section>
   
 </section>
         
