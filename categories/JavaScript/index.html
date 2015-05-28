@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: hexo | Hexo</title>
+  <title>Category: JavaScript | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta content="website" property="og:type">
 <meta content="Hexo" property="og:title">
-<meta content="http://yoursite.com/tags/hexo/" property="og:url">
+<meta content="http://yoursite.com/categories/JavaScript/" property="og:url">
 <meta property="og:image">
 <meta content="Hexo" property="og:site_name">
 <meta property="og:description">
@@ -59,12 +59,16 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-hexo-quickstart" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-how-to-install-javascript-apps" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2014/05/16/hexo-quickstart/" class="article-date">
-  <time datetime="2014-05-16T06:49:35.000Z" itemprop="datePublished">May 16 2014</time>
+    <a href="/2014/05/16/how-to-install-javascript-apps/" class="article-date">
+  <time datetime="2014-05-16T06:55:30.000Z" itemprop="datePublished">May 16 2014</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -73,7 +77,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/05/16/hexo-quickstart/">Hexo QuickStart</a>
+      <a class="article-title" href="/2014/05/16/how-to-install-javascript-apps/">How to Install JavaScript Apps</a>
     </h1>
   
 
@@ -81,26 +85,105 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Hexo_QuickStart">Hexo QuickStart</h2>
-<h3 id="Install">Install</h3>
-<pre><code>npm <span class="keyword">install</span> hexo -g
-</code></pre><h3 id="Setup">Setup</h3>
-<pre><code>hexo init blog &amp;&amp; <span class="built_in">cd</span> blog
-</code></pre><h3 id="Creates_a_new_article">Creates a new article</h3>
-<pre><code>hexo <span class="keyword">new</span> [layout] &lt;title&gt;
-</code></pre><p>If <code>layout</code> isn’t defined, it’ll be <code>default_layout</code> setting. If the title is more than one word, wrap it with quotation marks.</p>
-<h3 id="Generates_static_files">Generates static files</h3>
-<pre><code>hexo <span class="keyword">generate</span>
-</code></pre><h3 id="Starts_server">Starts server</h3>
-<pre><code>hexo <span class="keyword">server</span>
-</code></pre>
+        <h1 id="How_to_Install_JavaScript_Apps">How to Install JavaScript Apps</h1>
+<h2 id="Install_node_programs">Install node programs</h2>
+<ul>
+<li>npm config(?what is npm?)  </li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre>npm config <span class="keyword">set</span> registry http://registry<span class="preprocessor">.cnpmjs</span><span class="preprocessor">.org</span>
+npm info underscore
+</pre></td></tr></table></figure>
+
+<ul>
+<li><p>Install cnpm(?what is cnpm?)<br><code>npm i -g cnpm</code></p>
+</li>
+<li><p>Examples<br>  <code>npm i -g harp --registry=http://r.cnpmjs.org</code>  </p>
+<p>  <code>npm i -g grunt-cli grunt-init --registry=http://r.cnpmjs.org</code>  </p>
+</li>
+</ul>
+<h2 id="Install_node_programs_with_npmbox">Install node programs with npmbox</h2>
+<p>npm addon utility for creating and installing from an archive file of an npm install, including dependencies. This lets you create a “box” of an installable package and move it to an offline system that will only install from that box.</p>
+<ul>
+<li>Usage of <code>npmbox</code>  </li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="code"><pre>npmbox - Create an archive <span class="keyword">for</span> offline installation of the given package.
+
+Usage:
+
+  		npmbox --help
+  		npmbox [options] &lt;package&gt; &lt;package&gt;<span class="keyword">...</span>
+
+Options:
+
+  		-v, -verbose         Shows npm output which is normally hidden.
+</pre></td></tr></table></figure>
+
+<p>You must specify at least one package.</p>
+<p>You can specify more than one package and a separate archive will be created for each specified.</p>
+<p>npmbox files end with the .npmbox extension.</p>
+<ul>
+<li>Usage of <code>npmunbox</code>  </li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="code"><pre>npmunbox - Extracts <span class="operator">a</span> .npmbox <span class="built_in">file</span> <span class="operator">and</span> installs <span class="operator">the</span> contained package.
+
+Usage:
+
+	npmunbox <span class="comment">--help</span>
+	npmunbox [options] &lt;nmpbox-<span class="built_in">file</span>&gt; &lt;npmbox-<span class="built_in">file</span>&gt;...
+
+Options:
+
+	-v, -verbose         Shows npm output which is normally hidden.
+	-g, -<span class="built_in">global</span>          Installs package globally <span class="keyword">as</span> <span class="keyword">if</span> <span class="comment">--global was passed to npm.</span>
+</pre></td></tr></table></figure>
+
+<p>You must specify at least one file.</p>
+<p>You may specify more than one file, and each will be installed.</p>
+<ul>
+<li><p>Installing npmbox from an .npmbox file  </p>
+<p>  <code>npm install --global --cache ./.npmbox-cache --optional --no-registry --fetch-retries 0 --fetch-retry-factor 0 --fetch-retry-mintimeout 1 --fetch-retry-maxtimeout 2 npmbox</code></p>
+</li>
+</ul>
+<h3 id="Node_Wiki">Node Wiki</h3>
+<p>A simple git based wiki system for markdown files written in node.js.</p>
+<ul>
+<li><p>Install<br>  <code>cnpm i nodewiki -g</code></p>
+</li>
+<li><p>Usage<br>  <code>nodewiki [options]</code>  </p>
+<p>  If you do not want other computers to be able to access node wiki, then use <code>--local</code> or <code>--port=127.0.0.1</code>. The URL for node wiki will then be <a href="http://localhost:8888/" target="_blank">http://localhost:8888/</a>.</p>
+</li>
+</ul>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/05/16/hexo-quickstart/" data-id="1iswpjs6k42syvbe" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2014/05/16/how-to-install-javascript-apps/" data-id="2oavehmilr8r828u" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cnpm/">cnpm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npmbox/">npmbox</a></li></ul>
 
     </footer>
   </div>
