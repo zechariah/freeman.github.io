@@ -3,18 +3,31 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Pandoc Notes | Zechariah&#39;s blog</title>
+  <title>Vim Notes (1) | Zechariah&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta content="article" property="og:type">
-<meta content="Pandoc Notes" property="og:title">
-<meta content="http://yoursite.com/2014/05/16/pandoc-notes/" property="og:url">
+<meta content="Vim Notes (1)" property="og:title">
+<meta content="http://yoursite.com/2015/06/13/vim-notes(1)/" property="og:url">
 <meta property="og:image">
 <meta content="Zechariah's blog" property="og:site_name">
-<meta content="Pandoc Notes
+<meta content="! Vim
 
-HTML with CSS:pandoc 01-chapter2.markdown -o chapter2.html -c Github.css— http://www.yangzhiping.com/tech/pandoc.html
+Jump to a subject: CTRL-]
+Jump back: CTRL-T or CTRL-O (?)
+:history
+vimrc example
 
-HTML with smart quotes, table of contents, CSS, and custom footer:p" property="og:description">
+1
+2
+3
+    :set linespace=6
+    :set go=
+    :colo evening
+
+
+
+CTRL-W j and CTRL-W k
+J — Join [count] lines, with" property="og:description">
 <meta content="summary" name="twitter:card">
   
     <link rel="alternative" href="/atom.xml" title="Zechariah&#39;s blog" type="application/atom+xml">
@@ -65,12 +78,16 @@ HTML with smart quotes, table of contents, CSS, and custom footer:p" property="o
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-pandoc-notes" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-vim-notes(1)" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2014/05/16/pandoc-notes/" class="article-date">
-  <time datetime="2014-05-16T06:57:32.000Z" itemprop="datePublished">May 16 2014</time>
+    <a href="/2015/06/13/vim-notes(1)/" class="article-date">
+  <time datetime="2015-06-13T08:34:57.000Z" itemprop="datePublished">Jun 13 2015</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Vim/">Vim</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -79,7 +96,7 @@ HTML with smart quotes, table of contents, CSS, and custom footer:p" property="o
         
   
     <h1 class="article-title" itemprop="name">
-      Pandoc Notes
+      Vim Notes (1)
     </h1>
   
 
@@ -87,42 +104,84 @@ HTML with smart quotes, table of contents, CSS, and custom footer:p" property="o
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Pandoc_Notes">Pandoc Notes</h2>
+        <p>! Vim</p>
 <ul>
-<li><p>HTML with CSS:<br><code>pandoc 01-chapter2.markdown -o chapter2.html -c Github.css</code><br>— <a href="http://www.yangzhiping.com/tech/pandoc.html" target="_blank">http://www.yangzhiping.com/tech/pandoc.html</a></p>
-</li>
-<li><p>HTML with smart quotes, table of contents, CSS, and custom footer:<br><code>pandoc -s -S --toc -c pandoc.css -A footer.html README -o example3.html</code>  </p>
-</li>
-<li><p>HTML with embedded CSS:<br><code>pandoc -s -S --toc -H pandoc.css -A footer.html README -o example3.html</code></p>
-</li>
-<li><p><code>pandoc -s -o output.html input1.md intput2.md intput3.md</code>  </p>
-</li>
-<li><p>Syntax highlighting of delimited code blocks:<br><code>pandoc code.text -s --highlight-style zenburn -o example18g.html</code></p>
-</li>
-<li><p>Markdown citations:<br><code>pandoc -s -S --biblio biblio.bib --csl mhra.csl CITATIONS -o example24b.html</code></p>
-</li>
-<li><p>Textile reader:<br><code>pandoc -s -S example25.textile -f textile -t html -o example26.html</code></p>
-</li>
-<li><p>From HTML to Markdown:<br><code>pandoc -s -r html example.html -o example.md</code></p>
-</li>
-<li><p>If your local character encoding is not UTF-8, you should pipe input and output through iconv:<br><code>iconv -t utf-8 input.txt | pandoc | iconv -f utf-8</code></p>
-</li>
+<li>Jump to a subject: <code>CTRL-]</code></li>
+<li>Jump back: <code>CTRL-T</code> or <code>CTRL-O</code> (?)</li>
+<li><code>:history</code></li>
+<li>vimrc example</li>
 </ul>
-<hr>
-<p>Reference:  </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre>    <span class="symbol">:set</span> linespace=<span class="number">6</span>
+    <span class="symbol">:set</span> go=
+    <span class="symbol">:colo</span> evening
+</pre></td></tr></table></figure>
+
+<ul>
+<li><code>CTRL-W j</code> and <code>CTRL-W k</code></li>
+<li><code>J</code> — Join [count] lines, with a minimum of two lines.</li>
+</ul>
+<p>!! Search and replace</p>
 <ol>
-<li><a href="http://johnmacfarlane.net/pandoc/demos.html" target="_blank">http://johnmacfarlane.net/pandoc/demos.html</a>  </li>
-<li><a href="http://devilgate.org/blog/2012/07/02/tip-using-pandoc-to-create-truly-standalone-html-files/" target="_blank">Tip: using Pandoc to create truly standalone HTML files</a>  </li>
-<li><a href="http://www.yangzhiping.com/tech/pandoc.html" target="_blank">Markdown写作进阶：Pandoc入门浅谈</a>  </li>
+<li>Find each occurrence of ‘foo’(in all lines), and replace it with<br>‘bar’: </li>
 </ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>    <span class="symbol">:%s/foo/bar/g</span>
+</pre></td></tr></table></figure>
+
+<ol>
+<li>Find each occurrence of ‘foo’ (in the current line only), and replace<br>it with ‘bar’: </li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>    :<span class="regexp">s/foo/bar/g</span>
+</pre></td></tr></table></figure>
+
+<p>!! Recording a macro</p>
+<ol>
+<li><p>Each register is identifed by a letter <code>a</code> to <code>z</code>.</p>
+</li>
+<li><p>To enter a macro, type: </p>
+</li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>   <span class="string">q&lt;letter&gt;</span>&lt;commands&gt;<span class="keyword">q</span>
+</pre></td></tr></table></figure>
+
+<ol>
+<li><p>To excute the macro <number> times (once by default), type:<br><code>&lt;number&gt;@&lt;letter&gt;</code></p>
+</li>
+<li><p><code>@@</code> — excute your macro again</p>
+</li>
+</ol>
+<p>!! Swithching case of characters</p>
+<ul>
+<li>Use <code>~</code> to toggle case.  </li>
+</ul>
+<p>!! Accessing the system clipborad</p>
+<ul>
+<li>copy a line to system clipboard</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="string">"*yy</span>
+</pre></td></tr></table></figure>
+
+<ul>
+<li>paste</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="string">"*p</span>
+</pre></td></tr></table></figure>
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/05/16/pandoc-notes/" data-id="0iu9fc7ucoil8nxy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/06/13/vim-notes(1)/" data-id="6bk84a8y8gjfiiul" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pandoc/">pandoc</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">vim</a></li></ul>
 
     </footer>
   </div>
@@ -130,19 +189,19 @@ HTML with smart quotes, table of contents, CSS, and custom footer:p" property="o
     
 <nav id="article-nav">
   
-    <a href="/2014/05/16/how-to-install-ruby-gems/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/06/13/vim-notes(2)/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          how to Install Ruby Gems
+          Vim Notes (2)
         
       </div>
     </a>
   
   
-    <a href="/2014/05/16/how-to-install-javascript-apps/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2015/06/13/emacs-notes(1)/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">How to Install JavaScript Apps</div>
+      <div class="article-nav-title">Emacs Notes (1)</div>
     </a>
   
 </nav>

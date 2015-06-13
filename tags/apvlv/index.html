@@ -3,18 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Pandoc Notes | Zechariah&#39;s blog</title>
+  <title>Tag: apvlv | Zechariah&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta content="article" property="og:type">
-<meta content="Pandoc Notes" property="og:title">
-<meta content="http://yoursite.com/2014/05/16/pandoc-notes/" property="og:url">
+  <meta content="website" property="og:type">
+<meta content="Zechariah's blog" property="og:title">
+<meta content="http://yoursite.com/tags/apvlv/" property="og:url">
 <meta property="og:image">
 <meta content="Zechariah's blog" property="og:site_name">
-<meta content="Pandoc Notes
-
-HTML with CSS:pandoc 01-chapter2.markdown -o chapter2.html -c Github.css— http://www.yangzhiping.com/tech/pandoc.html
-
-HTML with smart quotes, table of contents, CSS, and custom footer:p" property="og:description">
+<meta property="og:description">
 <meta content="summary" name="twitter:card">
   
     <link rel="alternative" href="/atom.xml" title="Zechariah&#39;s blog" type="application/atom+xml">
@@ -65,12 +61,18 @@ HTML with smart quotes, table of contents, CSS, and custom footer:p" property="o
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-pandoc-notes" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main">
+  
+    <article id="post-vim-notes(2)" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2014/05/16/pandoc-notes/" class="article-date">
-  <time datetime="2014-05-16T06:57:32.000Z" itemprop="datePublished">May 16 2014</time>
+    <a href="/2015/06/13/vim-notes(2)/" class="article-date">
+  <time datetime="2015-06-13T08:38:46.000Z" itemprop="datePublished">Jun 13 2015</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Vim/">Vim</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -78,8 +80,8 @@ HTML with smart quotes, table of contents, CSS, and custom footer:p" property="o
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      Pandoc Notes
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/06/13/vim-notes(2)/">Vim Notes (2)</a>
     </h1>
   
 
@@ -87,69 +89,49 @@ HTML with smart quotes, table of contents, CSS, and custom footer:p" property="o
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Pandoc_Notes">Pandoc Notes</h2>
+        <p>!!vifm</p>
 <ul>
-<li><p>HTML with CSS:<br><code>pandoc 01-chapter2.markdown -o chapter2.html -c Github.css</code><br>— <a href="http://www.yangzhiping.com/tech/pandoc.html" target="_blank">http://www.yangzhiping.com/tech/pandoc.html</a></p>
-</li>
-<li><p>HTML with smart quotes, table of contents, CSS, and custom footer:<br><code>pandoc -s -S --toc -c pandoc.css -A footer.html README -o example3.html</code>  </p>
-</li>
-<li><p>HTML with embedded CSS:<br><code>pandoc -s -S --toc -H pandoc.css -A footer.html README -o example3.html</code></p>
-</li>
-<li><p><code>pandoc -s -o output.html input1.md intput2.md intput3.md</code>  </p>
-</li>
-<li><p>Syntax highlighting of delimited code blocks:<br><code>pandoc code.text -s --highlight-style zenburn -o example18g.html</code></p>
-</li>
-<li><p>Markdown citations:<br><code>pandoc -s -S --biblio biblio.bib --csl mhra.csl CITATIONS -o example24b.html</code></p>
-</li>
-<li><p>Textile reader:<br><code>pandoc -s -S example25.textile -f textile -t html -o example26.html</code></p>
-</li>
-<li><p>From HTML to Markdown:<br><code>pandoc -s -r html example.html -o example.md</code></p>
-</li>
-<li><p>If your local character encoding is not UTF-8, you should pipe input and output through iconv:<br><code>iconv -t utf-8 input.txt | pandoc | iconv -f utf-8</code></p>
-</li>
+<li><code>cw</code> — rename a file or files</li>
 </ul>
-<hr>
-<p>Reference:  </p>
-<ol>
-<li><a href="http://johnmacfarlane.net/pandoc/demos.html" target="_blank">http://johnmacfarlane.net/pandoc/demos.html</a>  </li>
-<li><a href="http://devilgate.org/blog/2012/07/02/tip-using-pandoc-to-create-truly-standalone-html-files/" target="_blank">Tip: using Pandoc to create truly standalone HTML files</a>  </li>
-<li><a href="http://www.yangzhiping.com/tech/pandoc.html" target="_blank">Markdown写作进阶：Pandoc入门浅谈</a>  </li>
-</ol>
+<p>!! apvlv<br>apvlv is a PDF/DJVU/UMD/TXT Viewer Under Linux/WIN32 and its behaviour like Vim.</p>
+<p>Like Vim, Apvlv makes people reading their PDF files just like using Vim.</p>
+<ul>
+<li><code>[num]C-f</code> — to forward page</li>
+<li><code>[num]C-b</code> — to previous page</li>
+<li><code>0</code> — show the content of a directory on your system</li>
+<li><code>t</code>— open the slected document in a new tab</li>
+</ul>
+<p>!! Vimperator</p>
+<blockquote>
+<p><a href="http://vimperator.org/" target="_blank">Vimperator</a> is a <a href="http://www.mozilla.com/firefox/" target="_blank">Firefox</a> browser extension with strong inspiration from the Vim text editor,<br>with a mind towards faster and more efficient browsing.</p>
+</blockquote>
+<ul>
+<li><code>d</code> —- Delete current buffer tab</li>
+<li><code>:set gui=none</code></li>
+<li><code>:set gui=menu</code></li>
+<li><code>&lt;space&gt;/&lt;C-b&gt;</code> —- scroll down/up by one page</li>
+<li><code>&lt;C-d&gt;/&lt;C-u&gt;</code> —- scroll down/up by 1/2 page</li>
+<li><code>[count]gT</code> —- Go to the previous tab</li>
+<li><code>[count]gt</code> —- Go to the next tab</li>
+<li><code>c</code> —- Start caret mode</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/05/16/pandoc-notes/" data-id="0iu9fc7ucoil8nxy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/06/13/vim-notes(2)/" data-id="6dquhe93no49exc4" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pandoc/">pandoc</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PDF Reader/">PDF Reader</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/apvlv/">apvlv</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/file manager/">file manager</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/firefox add-on/">firefox add-on</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vifm/">vifm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">vim</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vimperator/">vimperator</a></li></ul>
 
     </footer>
   </div>
   
-    
-<nav id="article-nav">
-  
-    <a href="/2014/05/16/how-to-install-ruby-gems/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          how to Install Ruby Gems
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2014/05/16/how-to-install-javascript-apps/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">How to Install JavaScript Apps</div>
-    </a>
-  
-</nav>
-
-  
 </article>
 
+
+  
+  
 </section>
         
           <aside id="sidebar">

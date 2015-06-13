@@ -3,18 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Pandoc Notes | Zechariah&#39;s blog</title>
+  <title>Tag: emacs | Zechariah&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta content="article" property="og:type">
-<meta content="Pandoc Notes" property="og:title">
-<meta content="http://yoursite.com/2014/05/16/pandoc-notes/" property="og:url">
+  <meta content="website" property="og:type">
+<meta content="Zechariah's blog" property="og:title">
+<meta content="http://yoursite.com/tags/emacs/" property="og:url">
 <meta property="og:image">
 <meta content="Zechariah's blog" property="og:site_name">
-<meta content="Pandoc Notes
-
-HTML with CSS:pandoc 01-chapter2.markdown -o chapter2.html -c Github.css— http://www.yangzhiping.com/tech/pandoc.html
-
-HTML with smart quotes, table of contents, CSS, and custom footer:p" property="og:description">
+<meta property="og:description">
 <meta content="summary" name="twitter:card">
   
     <link rel="alternative" href="/atom.xml" title="Zechariah&#39;s blog" type="application/atom+xml">
@@ -65,12 +61,18 @@ HTML with smart quotes, table of contents, CSS, and custom footer:p" property="o
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-pandoc-notes" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main">
+  
+    <article id="post-emacs-notes(3)@org-mode" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2014/05/16/pandoc-notes/" class="article-date">
-  <time datetime="2014-05-16T06:57:32.000Z" itemprop="datePublished">May 16 2014</time>
+    <a href="/2015/06/13/emacs-notes(3)@org-mode/" class="article-date">
+  <time datetime="2015-06-13T08:57:55.000Z" itemprop="datePublished">Jun 13 2015</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Emacs/">Emacs</a>►<a class="article-category-link" href="/categories/Emacs/Org-mode/">Org-mode</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -78,8 +80,8 @@ HTML with smart quotes, table of contents, CSS, and custom footer:p" property="o
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      Pandoc Notes
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/06/13/emacs-notes(3)@org-mode/">Emacs Notes (3) @org-mode</a>
     </h1>
   
 
@@ -87,69 +89,247 @@ HTML with smart quotes, table of contents, CSS, and custom footer:p" property="o
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Pandoc_Notes">Pandoc Notes</h2>
-<ul>
-<li><p>HTML with CSS:<br><code>pandoc 01-chapter2.markdown -o chapter2.html -c Github.css</code><br>— <a href="http://www.yangzhiping.com/tech/pandoc.html" target="_blank">http://www.yangzhiping.com/tech/pandoc.html</a></p>
+        <ul>
+<li><p><code>#+STYLE: &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;org-mode-snapshot.css&quot; /&gt;</code></p>
 </li>
-<li><p>HTML with smart quotes, table of contents, CSS, and custom footer:<br><code>pandoc -s -S --toc -c pandoc.css -A footer.html README -o example3.html</code>  </p>
+<li><p>JavaScript code blocks identifier: js</p>
 </li>
-<li><p>HTML with embedded CSS:<br><code>pandoc -s -S --toc -H pandoc.css -A footer.html README -o example3.html</code></p>
+<li><p>CSS code blocks identifier: css</p>
 </li>
-<li><p><code>pandoc -s -o output.html input1.md intput2.md intput3.md</code>  </p>
-</li>
-<li><p>Syntax highlighting of delimited code blocks:<br><code>pandoc code.text -s --highlight-style zenburn -o example18g.html</code></p>
-</li>
-<li><p>Markdown citations:<br><code>pandoc -s -S --biblio biblio.bib --csl mhra.csl CITATIONS -o example24b.html</code></p>
-</li>
-<li><p>Textile reader:<br><code>pandoc -s -S example25.textile -f textile -t html -o example26.html</code></p>
-</li>
-<li><p>From HTML to Markdown:<br><code>pandoc -s -r html example.html -o example.md</code></p>
-</li>
-<li><p>If your local character encoding is not UTF-8, you should pipe input and output through iconv:<br><code>iconv -t utf-8 input.txt | pandoc | iconv -f utf-8</code></p>
+<li><p>Org mode code blocks identifier: org</p>
 </li>
 </ul>
-<hr>
-<p>Reference:  </p>
-<ol>
-<li><a href="http://johnmacfarlane.net/pandoc/demos.html" target="_blank">http://johnmacfarlane.net/pandoc/demos.html</a>  </li>
-<li><a href="http://devilgate.org/blog/2012/07/02/tip-using-pandoc-to-create-truly-standalone-html-files/" target="_blank">Tip: using Pandoc to create truly standalone HTML files</a>  </li>
-<li><a href="http://www.yangzhiping.com/tech/pandoc.html" target="_blank">Markdown写作进阶：Pandoc入门浅谈</a>  </li>
-</ol>
+<h4 id="Easy_Templates">Easy Templates</h4>
+<pre>
+* `<-s-TAB`    +BEGIN_SRC...#+END_SRC
+
+* `<-e-TAB`    #+BEGIN_EXAMPLE...#+END_EXAMPLE
+
+* `<-q-TAB`    #+BEGIN_QUOTE...#+END_QUOTE
+
+* `<-v-TAB`    #+BEGIN_VERSE...#+END_VERSE
+
+* `<-c-TAB`    #+BEGIN_CENTER...#+END_CENTER
+
+* `<-h-TAB`    #+BEGIN_HTML...#+END_HTML
+
+* `<-H-TAB`    #+HTML:
+
+* `<-i-TAB`    #+INDEX: line
+
+* `<-I-TAB`    #+INCLUDE: line
+</pre>
+
+<ul>
+<li><code>S-LEFT/RIGHT</code> —- Change date at cursor by one day</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/05/16/pandoc-notes/" data-id="0iu9fc7ucoil8nxy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/06/13/emacs-notes(3)@org-mode/" data-id="zjcwoa43u4ji9ae3" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pandoc/">pandoc</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/emacs/">emacs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/org-mode/">org-mode</a></li></ul>
 
     </footer>
   </div>
   
-    
-<nav id="article-nav">
-  
-    <a href="/2014/05/16/how-to-install-ruby-gems/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          how to Install Ruby Gems
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2014/05/16/how-to-install-javascript-apps/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">How to Install JavaScript Apps</div>
-    </a>
-  
-</nav>
+</article>
 
+
+  
+    <article id="post-emacs-notes(2)@howm" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/06/13/emacs-notes(2)@howm/" class="article-date">
+  <time datetime="2015-06-13T08:54:51.000Z" itemprop="datePublished">Jun 13 2015</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Emacs/">Emacs</a>►<a class="article-category-link" href="/categories/Emacs/note-taking/">note-taking</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/06/13/emacs-notes(2)@howm/">Emacs Notes (2) @howm</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>Wiki-like notetaking tool</p>
+<p><a href="http://howm.sourceforge.jp/" target="_blank">howm: Write fragmentarily and read collectively.</a>  </p>
+</blockquote>
+<p>== Write a note  </p>
+<ul>
+<li>Type <code>C-c , c</code> to create new note.</li>
+</ul>
+<p>==  Concatenate notes  </p>
+<ul>
+<li><p>Type <code>C-c , ,</code> to open the menu  </p>
+</li>
+<li><p>Move the cursor to <code>[All]</code> and type <code>[return]</code></p>
+</li>
+<li><p>Type <code>@</code> to concatenate all notes  </p>
+</li>
+<li><p>Type <code>[space]</code> and <code>[backspace]</code> to scroll the notes.</p>
+</li>
+<li><p>Type <code>@</code> to toggle summary-view and concatenated-view.</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/06/13/emacs-notes(2)@howm/" data-id="nlc6s0431qb6khza" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/emacs/">emacs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/howm/">howm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/note-taking/">note-taking</a></li></ul>
+
+    </footer>
+  </div>
   
 </article>
 
+
+  
+    <article id="post-emacs-notes(1)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/06/13/emacs-notes(1)/" class="article-date">
+  <time datetime="2015-06-13T08:17:16.000Z" itemprop="datePublished">Jun 13 2015</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Emacs/">Emacs</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/06/13/emacs-notes(1)/">Emacs Notes (1)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>C-x C-d —- List directory (brief)</p>
+</li>
+<li><p>C-x C-t —- ?</p>
+</li>
+<li><p>M-x org-time-stamp —- insert date</p>
+</li>
+<li><p>C-u M-x org-time-stamp —- insert date time</p>
+</li>
+<li><p>difference between <code>load-file</code> and <code>load</code>?</p>
+</li>
+<li><p>Insert time with insert-time.el —- <code>C-c d</code> and <code>C-c t</code></p>
+</li>
+<li><p>Load a file<br>(load-file “insert-time.el”)</p>
+</li>
+</ul>
+<p>(load “c:/bjk/elisp/bjk-timestamp.el”)</p>
+<ul>
+<li>Adding a directory</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="list">(<span class="title">add-to-list</span> 'load-path <span class="string">"~/.emacs.d/lisp/"</span>)</span>
+</pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>M-X join-line</code>:<br>Join this line to previous and fix up whitespace at join</p>
+</li>
+<li><p><code>M-X info-emacs-manual</code> —- View emacs manual;<br><code>C-h r</code> —- Read the Emacs Manual;  </p>
+</li>
+<li><p><code>C-h i d</code> —- The Info Directory</p>
+</li>
+<li><p>Query replace: <code>M-%</code><br>replace this one, go on to next with <code>SPC</code><br>replace all remaining matches with <code>!</code></p>
+</li>
+<li><p>Select coding system (?)</p>
+</li>
+<li><p><code>C-x o</code> — switch cursor to anthor window</p>
+</li>
+<li><p><code>C-l</code> — Clear screen and redisplay everything putting the text near the cursor at the center.</p>
+</li>
+<li><p>Motion  </p>
+<pre>
+entity to move over              backward        forward
+character                        C-b             C-f
+word                             M-b             M-f
+sentence                         M-a             M-e
+go to buffer begining (or end)   M-<             M->
+</pre>
+</li>
+<li><p><code>C-u 0 C-l</code> — redraw the screen, putting the current line at the top</p>
+</li>
+<li><p>Killing and Deleting</p>
+<pre>
+entity to kill                        backward    forward
+character(delete, not kill)                  DEL        C-d
+word                                M-DEL       M-d
+line(to end of)                        M-0 C-k     C-k
+yank back last thing killed                   C-y
+replace last yank with previous kill         M-y
+</pre>
+</li>
+<li><p><code>C-x u</code> — Undo</p>
+</li>
+<li><p>Keyboard Macros</p>
+<ul>
+<li><code>C-x (</code> — <strong>start</strong> defining a keyboard macro </li>
+<li><code>C-x )</code> — <strong>end</strong> keyboard macro definition</li>
+<li><code>C-x e</code> — <strong>excute</strong> last-defined keyboard macro</li>
+</ul>
+</li>
+<li><p><code>M-x ediff</code> —- Compare two files and highlight their differences  </p>
+</li>
+<li><p><code>M-x gnus</code> —- Read news, mail, and RSS feeds  </p>
+</li>
+<li><p><code>C-h t</code> —- Emacs Tutorial; </p>
+<p><code>C-h m</code> —- get mode-specific information;<br><code>C-h k</code> —- Shows documentation for the command associated with any particular key;<br><code>C-h f</code> —- Shows documentation for any particular command, by name (i.e. what you would type after  M-x );<br><code>C-h a</code> —- Search for commands by keywords or regexp<br><code>C-h C-f</code> —- GNU Emacs FAQ  </p>
+</li>
+<li><p><code>M-x auto-fill-mode</code> —- Wraps your lines automatically when they get longer than 70 characters.</p>
+</li>
+<li><p><code>M-x list-packages</code></p>
+</li>
+<li><p><code>M-x linum-mode</code> —- Display line number</p>
+</li>
+<li><p><code>M-x webjump</code>  </p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/06/13/emacs-notes(1)/" data-id="3fqjxrmslnui0ct7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/emacs/">emacs</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
 </section>
         
           <aside id="sidebar">
