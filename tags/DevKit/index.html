@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Tag: DevKit | Zechariah&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta content="website" property="og:type">
+<meta content="Zechariah's blog" property="og:title">
+<meta content="http://yoursite.com/tags/DevKit/" property="og:url">
+<meta property="og:image">
+<meta content="Zechariah's blog" property="og:site_name">
+<meta property="og:description">
+<meta content="summary" name="twitter:card">
+  
+    <link rel="alternative" href="/atom.xml" title="Zechariah&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Zechariah&#39;s blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">To be an active learner</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-ruby-notes(1)@install-ruby-gems" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/05/16/ruby-notes(1)@install-ruby-gems/" class="article-date">
+  <time datetime="2014-05-16T07:01:25.000Z" itemprop="datePublished">May 16 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Ruby/">Ruby</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/05/16/ruby-notes(1)@install-ruby-gems/">Ruby Notes (1) @How to Install Ruby Gems</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="RubyGems">RubyGems</h2>
+<blockquote>
+<p>RubyGems is a package management framework for Ruby.</p>
+</blockquote>
+<ul>
+<li>Add gem sources:  </li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre>gem sources <span class="subst">--</span>remove https:<span class="comment">//rubygems.org/</span>
+gem sources <span class="attribute">-a</span> https:<span class="comment">//ruby.taobao.org/</span>
+gem sources <span class="attribute">-l</span>
+</pre></td></tr></table></figure>
+
+<ul>
+<li>Install the gems on the destination machine from the local files:<br><code>gem install --force --local *.gem</code><br>Or<br><code>gem install --local *.gem</code>  </li>
+</ul>
+<h2 id="Bundler">Bundler</h2>
+<blockquote>
+<p>Bundler provides a consistent environment for Ruby projects by tracking and installing the exact gems and versions that are needed.  </p>
+</blockquote>
+<ul>
+<li><p>Generate a Gemfile with the default rubygems.org source by running <code>bundle init</code>.  </p>
+</li>
+<li><p>Gemfile is a format for describing gem dependencies for Ruby Programs.  </p>
+<blockquote>
+<p>Place the <strong>Gemfile</strong> in the root of the directory containing the<br>associated code.   </p>
+</blockquote>
+</li>
+<li><p><code>bundle install</code>  </p>
+</li>
+<li><p><code>bundle install --without=pygments jekyll</code>  </p>
+</li>
+<li><p><code>bundle install --local</code>  </p>
+</li>
+<li><p><code>bundle exec ruhoh server 9292</code>  </p>
+</li>
+<li><p>Write Gemfile from the command-line:  </p>
+</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="built_in">cd</span> ruhoh-site
+touch Gemfile 
+<span class="built_in">echo</span> <span class="string">"source \"https://rubygems.org\""</span> &gt;&gt; Gemfile
+<span class="built_in">echo</span> <span class="string">"gem 'ruhoh', \"~&gt;2\""</span> &gt;&gt; Gemfile
+</pre></td></tr></table></figure>
+
+<h3 id="My_Gemfile">My Gemfile</h3>
+<ul>
+<li>For MarkdownJournal  </li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="keyword">source</span> <span class="string">'https://rubygems.org'</span>
+#<span class="keyword">source</span> <span class="string">'http://gems.rubyforge.org'</span>
+gem <span class="string">'sinatra'</span>, <span class="string">'~&gt;1.4.2'</span>
+gem <span class="string">'dropbox-sdk'</span>, <span class="string">'~&gt;1.5.1'</span>
+gem <span class="string">'activesupport'</span>, <span class="string">'~&gt;3.2.13'</span>
+gem <span class="string">'tzinfo'</span>, <span class="string">'~&gt;0.3.4'</span>
+gem <span class="string">'rdiscount'</span>, <span class="string">'~&gt;1.6.8'</span>
+</pre></td></tr></table></figure>
+
+<ul>
+<li>For Ruhoh  </li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="built_in">source</span> <span class="string">"https://ruby.taobao.org/"</span>
+gem <span class="string">'ruhoh'</span>, <span class="string">"~&gt; 2"</span>
+</pre></td></tr></table></figure>
+
+<h2 id="Install_DevKit">Install DevKit</h2>
+<ul>
+<li>Run Installation Scripts<br>First <code>ruby dk.rb init</code> then <code>ruby dk.rb install</code>  </li>
+<li>Test Installation<br>Confirm your Ruby environment is correctly using the DevKit by running <code>gem install json --platform=ruby</code>. JSON should install correctly and you should see <code>with native extensions</code> in the screen messages.<br>Next run <code>ruby -rubygems -e &quot;require &#39;json&#39;; puts JSON.load(&#39;[42]&#39;).inspect&quot;</code> to confirm that the json gem is working.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2014/05/16/ruby-notes(1)@install-ruby-gems/" data-id="mupcnu9f9rv8u12e" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bundler/">Bundler</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevKit/">DevKit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby/">Ruby</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RubyGems/">RubyGems</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blogging/">Blogging</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Emacs/">Emacs</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Emacs/Org-mode/">Org-mode</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Note-taking Solutions/">Note-taking Solutions</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ruby/">Ruby</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vim/">Vim</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bundler/">Bundler</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevKit/">DevKit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GPG/">GPG</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScipt/">JavaScipt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/">Node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PDF Reader/">PDF Reader</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ruby/">Ruby</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RubyGems/">RubyGems</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apvlv/">apvlv</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cnpm/">cnpm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/emacs/">emacs</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/file manager/">file manager</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/firefox add-on/">firefox add-on</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/howm/">howm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note-taking/">note-taking</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npmbox/">npmbox</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/org-mode/">org-mode</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pandoc/">pandoc</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vifm/">vifm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vimperator/">vimperator</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Bundler/" style="font-size: 15.00px;">Bundler</a><a href="/tags/DevKit/" style="font-size: 10.00px;">DevKit</a><a href="/tags/GPG/" style="font-size: 10.00px;">GPG</a><a href="/tags/Git/" style="font-size: 10.00px;">Git</a><a href="/tags/JavaScipt/" style="font-size: 10.00px;">JavaScipt</a><a href="/tags/JavaScript/" style="font-size: 15.00px;">JavaScript</a><a href="/tags/Markdown/" style="font-size: 10.00px;">Markdown</a><a href="/tags/Node/" style="font-size: 10.00px;">Node</a><a href="/tags/PDF Reader/" style="font-size: 10.00px;">PDF Reader</a><a href="/tags/Ruby/" style="font-size: 15.00px;">Ruby</a><a href="/tags/RubyGems/" style="font-size: 15.00px;">RubyGems</a><a href="/tags/apvlv/" style="font-size: 10.00px;">apvlv</a><a href="/tags/cnpm/" style="font-size: 10.00px;">cnpm</a><a href="/tags/emacs/" style="font-size: 20.00px;">emacs</a><a href="/tags/file manager/" style="font-size: 10.00px;">file manager</a><a href="/tags/firefox add-on/" style="font-size: 10.00px;">firefox add-on</a><a href="/tags/hexo/" style="font-size: 10.00px;">hexo</a><a href="/tags/howm/" style="font-size: 10.00px;">howm</a><a href="/tags/note-taking/" style="font-size: 10.00px;">note-taking</a><a href="/tags/npm/" style="font-size: 15.00px;">npm</a><a href="/tags/npmbox/" style="font-size: 15.00px;">npmbox</a><a href="/tags/org-mode/" style="font-size: 10.00px;">org-mode</a><a href="/tags/pandoc/" style="font-size: 10.00px;">pandoc</a><a href="/tags/vifm/" style="font-size: 10.00px;">vifm</a><a href="/tags/vim/" style="font-size: 15.00px;">vim</a><a href="/tags/vimperator/" style="font-size: 10.00px;">vimperator</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06">June 2015</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05">May 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05">May 2014</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/06/14/ruby-notes(2)@learn-to-use-rubygems+bundler/">Ruby Notes (2)@Learn to Use Rubygems and Bundler</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/14/javascript-notes(2)@npm-config/">JavaScript Notes (2) @npm config</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/14/gpg-notes/">GPG Notes</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/14/git-notes/">Git Notes</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/13/emacs-notes(3)@org-mode/">Emacs Notes (3) @org-mode</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Zechariah<br>
+      Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script type="text/javascript" src="/js/script.js"></script>
+  </div>
+</body>
+</html>

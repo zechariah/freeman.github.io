@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Tag: GPG | Zechariah&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta content="website" property="og:type">
+<meta content="Zechariah's blog" property="og:title">
+<meta content="http://yoursite.com/tags/GPG/" property="og:url">
+<meta property="og:image">
+<meta content="Zechariah's blog" property="og:site_name">
+<meta property="og:description">
+<meta content="summary" name="twitter:card">
+  
+    <link rel="alternative" href="/atom.xml" title="Zechariah&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Zechariah&#39;s blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">To be an active learner</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-gpg-notes" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/06/14/gpg-notes/" class="article-date">
+  <time datetime="2015-06-14T07:35:10.000Z" itemprop="datePublished">Jun 14 2015</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/06/14/gpg-notes/">GPG Notes</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="GPG">GPG</h1>
+<ul>
+<li><p>Key server list:<br>— keyserver.ubuntu.com<br>— pgp.mit.edu<br>— <a href="http://pgp.mit.edu:11371" target="_blank">http://pgp.mit.edu:11371</a><br>— hkp://keys.gnupg.net<br>— OpenPGP Keyserver: <a href="http://subkeys.pgp.net:11371/" target="_blank">http://subkeys.pgp.net:11371/</a><br>— subkeys.pgp.net<br>— www.gpg-keyserver.de  </p>
+</li>
+<li><p>Search public key from a key server:<br><code>gpg --keyserver subkeys.pgp.net --search-keys [key ID]</code>  </p>
+</li>
+<li><p>Import public key from a key server:<br><code>gpg2 --keyserver hkp://pgp.mit.edu:11371 --recv-keys 0xB88CDF85</code>  </p>
+</li>
+<li><p>Import/Merge keys: <code>gpg --import [key files]</code>  </p>
+</li>
+<li><p>Show fingerprints:  <code>gpg2 --fingerprint 0xB88CDF85</code>  </p>
+</li>
+<li><p>Verify a signature: <code>gpg --verify [signature file(.sig or .asc)]</code>  </p>
+</li>
+<li><p>List keys: <code>gpg -k</code>  </p>
+</li>
+<li><p>Export public key: <code>gpg -a --export [key ID]</code></p>
+</li>
+</ul>
+<h1 id="EasyPG_Assistant">EasyPG Assistant</h1>
+<blockquote>
+<p>EasyPG Assistant is an Emacs user interface to GNU Privacy Guard (GnuPG).</p>
+<p>EasyPG Assistant is a part of the package called EasyPG, an all-in-one GnuPG interface for Emacs.</p>
+</blockquote>
+<ul>
+<li>Verify file: <code>epa-verify-file</code>  </li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/06/14/gpg-notes/" data-id="c187kyvn6fl6a882" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GPG/">GPG</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blogging/">Blogging</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Emacs/">Emacs</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Emacs/Org-mode/">Org-mode</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Note-taking Solutions/">Note-taking Solutions</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ruby/">Ruby</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vim/">Vim</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bundler/">Bundler</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevKit/">DevKit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GPG/">GPG</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScipt/">JavaScipt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/">Node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PDF Reader/">PDF Reader</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ruby/">Ruby</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RubyGems/">RubyGems</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apvlv/">apvlv</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cnpm/">cnpm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/emacs/">emacs</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/file manager/">file manager</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/firefox add-on/">firefox add-on</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/howm/">howm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note-taking/">note-taking</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npmbox/">npmbox</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/org-mode/">org-mode</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pandoc/">pandoc</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vifm/">vifm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vimperator/">vimperator</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Bundler/" style="font-size: 15.00px;">Bundler</a><a href="/tags/DevKit/" style="font-size: 10.00px;">DevKit</a><a href="/tags/GPG/" style="font-size: 10.00px;">GPG</a><a href="/tags/Git/" style="font-size: 10.00px;">Git</a><a href="/tags/JavaScipt/" style="font-size: 10.00px;">JavaScipt</a><a href="/tags/JavaScript/" style="font-size: 15.00px;">JavaScript</a><a href="/tags/Markdown/" style="font-size: 10.00px;">Markdown</a><a href="/tags/Node/" style="font-size: 10.00px;">Node</a><a href="/tags/PDF Reader/" style="font-size: 10.00px;">PDF Reader</a><a href="/tags/Ruby/" style="font-size: 15.00px;">Ruby</a><a href="/tags/RubyGems/" style="font-size: 15.00px;">RubyGems</a><a href="/tags/apvlv/" style="font-size: 10.00px;">apvlv</a><a href="/tags/cnpm/" style="font-size: 10.00px;">cnpm</a><a href="/tags/emacs/" style="font-size: 20.00px;">emacs</a><a href="/tags/file manager/" style="font-size: 10.00px;">file manager</a><a href="/tags/firefox add-on/" style="font-size: 10.00px;">firefox add-on</a><a href="/tags/hexo/" style="font-size: 10.00px;">hexo</a><a href="/tags/howm/" style="font-size: 10.00px;">howm</a><a href="/tags/note-taking/" style="font-size: 10.00px;">note-taking</a><a href="/tags/npm/" style="font-size: 15.00px;">npm</a><a href="/tags/npmbox/" style="font-size: 15.00px;">npmbox</a><a href="/tags/org-mode/" style="font-size: 10.00px;">org-mode</a><a href="/tags/pandoc/" style="font-size: 10.00px;">pandoc</a><a href="/tags/vifm/" style="font-size: 10.00px;">vifm</a><a href="/tags/vim/" style="font-size: 15.00px;">vim</a><a href="/tags/vimperator/" style="font-size: 10.00px;">vimperator</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06">June 2015</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05">May 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05">May 2014</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/06/14/ruby-notes(2)@learn-to-use-rubygems+bundler/">Ruby Notes (2)@Learn to Use Rubygems and Bundler</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/14/javascript-notes(2)@npm-config/">JavaScript Notes (2) @npm config</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/14/gpg-notes/">GPG Notes</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/14/git-notes/">Git Notes</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/13/emacs-notes(3)@org-mode/">Emacs Notes (3) @org-mode</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Zechariah<br>
+      Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script type="text/javascript" src="/js/script.js"></script>
+  </div>
+</body>
+</html>

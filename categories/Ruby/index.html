@@ -63,9 +63,100 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-how-to-install-ruby-gems" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-ruby-notes(2)@learn-to-use-rubygems+bundler" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2014/05/16/how-to-install-ruby-gems/" class="article-date">
+    <a href="/2015/06/14/ruby-notes(2)@learn-to-use-rubygems+bundler/" class="article-date">
+  <time datetime="2015-06-14T10:08:46.000Z" itemprop="datePublished">Jun 14 2015</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Ruby/">Ruby</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/06/14/ruby-notes(2)@learn-to-use-rubygems+bundler/">Ruby Notes (2)@Learn to Use Rubygems and Bundler</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="rubygems">rubygems</h1>
+<ul>
+<li>Add gem sources: </li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre>gem sources <span class="subst">--</span>remove https:<span class="comment">//rubygems.org/</span>
+gem sources <span class="attribute">-a</span> https:<span class="comment">//ruby.taobao.org/</span>
+gem sources <span class="attribute">-l</span>
+</pre></td></tr></table></figure>
+
+<ul>
+<li><p>Download gem using gem fetch:<br><code>gem fetch taskjuggler</code></p>
+</li>
+<li><p><code>gem install --local *.gem</code></p>
+</li>
+<li><p><code>gem list</code></p>
+</li>
+<li><p><code>gem list --local</code></p>
+</li>
+<li><p><code>gem list --help</code></p>
+</li>
+<li><p><code>gem --version</code></p>
+</li>
+<li><p>Query remote ruby gem server to find out gem dependencies:<br><code>gem dependency taskjuggler --remote</code></p>
+</li>
+</ul>
+<h1 id="Bundler">Bundler</h1>
+<ul>
+<li><p><code>bundle init</code>  </p>
+</li>
+<li><p>gemfile.lock???</p>
+</li>
+<li><p>Lock and cache gems from RubyGems into <code>./vendor/cache</code>:<br><code>bundle package</code></p>
+</li>
+<li><p>Do not attempt to fetch gems remotely and use the gem cache instead:<br><code>bundle install --local</code></p>
+</li>
+<li><p>To see where a bundled gem is installed: </p>
+</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>bundle <span class="operator"><span class="keyword">show</span> gemname</span>
+</pre></td></tr></table></figure>
+
+<h1 id="Ruby">Ruby</h1>
+<ul>
+<li><code>ruby --version</code></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/06/14/ruby-notes(2)@learn-to-use-rubygems+bundler/" data-id="uan89o3tw4u50ujr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bundler/">Bundler</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby/">Ruby</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RubyGems/">RubyGems</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ruby-notes(1)@install-ruby-gems" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/05/16/ruby-notes(1)@install-ruby-gems/" class="article-date">
   <time datetime="2014-05-16T07:01:25.000Z" itemprop="datePublished">May 16 2014</time>
 </a>
     
@@ -81,7 +172,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/05/16/how-to-install-ruby-gems/">how to Install Ruby Gems</a>
+      <a class="article-title" href="/2014/05/16/ruby-notes(1)@install-ruby-gems/">Ruby Notes (1) @How to Install Ruby Gems</a>
     </h1>
   
 
@@ -89,8 +180,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="How_to_Install_Ruby_Gems">How to Install Ruby Gems</h1>
-<h2 id="RubyGems">RubyGems</h2>
+        <h2 id="RubyGems">RubyGems</h2>
 <blockquote>
 <p>RubyGems is a package management framework for Ruby.</p>
 </blockquote>
@@ -179,9 +269,11 @@ gem <span class="string">'ruhoh'</span>, <span class="string">"~&gt; 2"</span>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/05/16/how-to-install-ruby-gems/" data-id="ubokc860c48uc2qg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2014/05/16/ruby-notes(1)@install-ruby-gems/" data-id="mupcnu9f9rv8u12e" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bundler/">Bundler</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevKit/">DevKit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby/">Ruby</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RubyGems/">RubyGems</a></li></ul>
+
     </footer>
   </div>
   
@@ -198,7 +290,7 @@ gem <span class="string">'ruhoh'</span>, <span class="string">"~&gt; 2"</span>
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blogging/">Blogging</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Emacs/">Emacs</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Emacs/Org-mode/">Org-mode</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Emacs/note-taking/">note-taking</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ruby/">Ruby</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vim/">Vim</a><span class="category-list-count">2</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blogging/">Blogging</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Emacs/">Emacs</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Emacs/Org-mode/">Org-mode</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Note-taking Solutions/">Note-taking Solutions</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ruby/">Ruby</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vim/">Vim</a><span class="category-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -207,7 +299,7 @@ gem <span class="string">'ruhoh'</span>, <span class="string">"~&gt; 2"</span>
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PDF Reader/">PDF Reader</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apvlv/">apvlv</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cnpm/">cnpm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/emacs/">emacs</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/file manager/">file manager</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/firefox add-on/">firefox add-on</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/howm/">howm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note-taking/">note-taking</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npmbox/">npmbox</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/org-mode/">org-mode</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pandoc/">pandoc</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vifm/">vifm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vimperator/">vimperator</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bundler/">Bundler</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevKit/">DevKit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GPG/">GPG</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScipt/">JavaScipt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/">Node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PDF Reader/">PDF Reader</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ruby/">Ruby</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RubyGems/">RubyGems</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apvlv/">apvlv</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cnpm/">cnpm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/emacs/">emacs</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/file manager/">file manager</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/firefox add-on/">firefox add-on</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/howm/">howm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note-taking/">note-taking</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npmbox/">npmbox</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/org-mode/">org-mode</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pandoc/">pandoc</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vifm/">vifm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vimperator/">vimperator</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -216,7 +308,7 @@ gem <span class="string">'ruhoh'</span>, <span class="string">"~&gt; 2"</span>
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/JavaScript/" style="font-size: 10.00px;">JavaScript</a><a href="/tags/Markdown/" style="font-size: 10.00px;">Markdown</a><a href="/tags/PDF Reader/" style="font-size: 10.00px;">PDF Reader</a><a href="/tags/apvlv/" style="font-size: 10.00px;">apvlv</a><a href="/tags/cnpm/" style="font-size: 10.00px;">cnpm</a><a href="/tags/emacs/" style="font-size: 20.00px;">emacs</a><a href="/tags/file manager/" style="font-size: 10.00px;">file manager</a><a href="/tags/firefox add-on/" style="font-size: 10.00px;">firefox add-on</a><a href="/tags/hexo/" style="font-size: 10.00px;">hexo</a><a href="/tags/howm/" style="font-size: 10.00px;">howm</a><a href="/tags/note-taking/" style="font-size: 10.00px;">note-taking</a><a href="/tags/npm/" style="font-size: 10.00px;">npm</a><a href="/tags/npmbox/" style="font-size: 10.00px;">npmbox</a><a href="/tags/org-mode/" style="font-size: 10.00px;">org-mode</a><a href="/tags/pandoc/" style="font-size: 10.00px;">pandoc</a><a href="/tags/vifm/" style="font-size: 10.00px;">vifm</a><a href="/tags/vim/" style="font-size: 15.00px;">vim</a><a href="/tags/vimperator/" style="font-size: 10.00px;">vimperator</a>
+      <a href="/tags/Bundler/" style="font-size: 15.00px;">Bundler</a><a href="/tags/DevKit/" style="font-size: 10.00px;">DevKit</a><a href="/tags/GPG/" style="font-size: 10.00px;">GPG</a><a href="/tags/Git/" style="font-size: 10.00px;">Git</a><a href="/tags/JavaScipt/" style="font-size: 10.00px;">JavaScipt</a><a href="/tags/JavaScript/" style="font-size: 15.00px;">JavaScript</a><a href="/tags/Markdown/" style="font-size: 10.00px;">Markdown</a><a href="/tags/Node/" style="font-size: 10.00px;">Node</a><a href="/tags/PDF Reader/" style="font-size: 10.00px;">PDF Reader</a><a href="/tags/Ruby/" style="font-size: 15.00px;">Ruby</a><a href="/tags/RubyGems/" style="font-size: 15.00px;">RubyGems</a><a href="/tags/apvlv/" style="font-size: 10.00px;">apvlv</a><a href="/tags/cnpm/" style="font-size: 10.00px;">cnpm</a><a href="/tags/emacs/" style="font-size: 20.00px;">emacs</a><a href="/tags/file manager/" style="font-size: 10.00px;">file manager</a><a href="/tags/firefox add-on/" style="font-size: 10.00px;">firefox add-on</a><a href="/tags/hexo/" style="font-size: 10.00px;">hexo</a><a href="/tags/howm/" style="font-size: 10.00px;">howm</a><a href="/tags/note-taking/" style="font-size: 10.00px;">note-taking</a><a href="/tags/npm/" style="font-size: 15.00px;">npm</a><a href="/tags/npmbox/" style="font-size: 15.00px;">npmbox</a><a href="/tags/org-mode/" style="font-size: 10.00px;">org-mode</a><a href="/tags/pandoc/" style="font-size: 10.00px;">pandoc</a><a href="/tags/vifm/" style="font-size: 10.00px;">vifm</a><a href="/tags/vim/" style="font-size: 15.00px;">vim</a><a href="/tags/vimperator/" style="font-size: 10.00px;">vimperator</a>
     </div>
   </div>
 
@@ -225,7 +317,7 @@ gem <span class="string">'ruhoh'</span>, <span class="string">"~&gt; 2"</span>
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06">June 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05">May 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05">May 2014</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06">June 2015</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05">May 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05">May 2014</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -237,23 +329,23 @@ gem <span class="string">'ruhoh'</span>, <span class="string">"~&gt; 2"</span>
       <ul>
         
           <li>
+            <a href="/2015/06/14/ruby-notes(2)@learn-to-use-rubygems+bundler/">Ruby Notes (2)@Learn to Use Rubygems and Bundler</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/14/javascript-notes(2)@npm-config/">JavaScript Notes (2) @npm config</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/14/gpg-notes/">GPG Notes</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/14/git-notes/">Git Notes</a>
+          </li>
+        
+          <li>
             <a href="/2015/06/13/emacs-notes(3)@org-mode/">Emacs Notes (3) @org-mode</a>
-          </li>
-        
-          <li>
-            <a href="/2015/06/13/emacs-notes(2)@howm/">Emacs Notes (2) @howm</a>
-          </li>
-        
-          <li>
-            <a href="/2015/06/13/vim-notes(2)/">Vim Notes (2)</a>
-          </li>
-        
-          <li>
-            <a href="/2015/06/13/vim-notes(1)/">Vim Notes (1)</a>
-          </li>
-        
-          <li>
-            <a href="/2015/06/13/emacs-notes(1)/">Emacs Notes (1)</a>
           </li>
         
       </ul>
